@@ -12,7 +12,7 @@
 | PF-006 | Fundação de SEO | Concluída |
 | PF-007 | Testes e validações | Concluída |
 | PF-008 | Documentação do projeto | Concluída |
-| PF-009 | Auditoria de encerramento | Pendente |
+| PF-009 | Auditoria de encerramento | Concluída |
 
 ### PF-001 — Inicialização do repositório
 
@@ -21,8 +21,9 @@ configurados; aplicação e build funcionais; README inicial criado.
 
 Evidência disponível: scaffold em `frontend/`, `package.json`,
 `package-lock.json`, `next.config.ts`, `tsconfig.json`, `src/app/` e README.
-A execução local dos comandos não faz parte desta consolidação documental;
-PF-001 não deve ser considerada validada além das evidências registradas.
+As validações posteriores confirmaram a execução da aplicação, o build de
+produção e o funcionamento do App Router; a documentação inicial permanece
+como evidência histórica da criação do scaffold.
 
 ### PF-002 — Configuração das ferramentas
 
@@ -116,7 +117,7 @@ Status: concluída. README, roadmap, backlog, arquitetura e design system foram
 revisados contra o código atual. Comandos, versões, estrutura, decisões,
 política de SEO e validações estão registrados sem declarar como implementadas
 as tecnologias futuras. O estado do backlog permanece PF-001 a PF-008
-concluídas e PF-009 pendente.
+concluídas, com PF-009 concluída nesta auditoria.
 
 ### PF-009 — Auditoria de encerramento
 
@@ -124,7 +125,25 @@ Revisar critérios anteriores, confirmar ausência de bloqueios estruturais,
 verificar complexidade desnecessária, registrar validações e pendências e
 confirmar prontidão para o EPIC-02.
 
-Status: pendente.
+Status: concluída. A auditoria final confirmou:
+
+- PF-001 a PF-008 documentadas como concluídas, com evidências coerentes com o
+  código atual.
+- `npm run test`: 1 arquivo e 3 testes aprovados.
+- `npm run lint`, `npm run typecheck` e `npm run format:check`: aprovados.
+- `npm run build`: aprovado, com as rotas `/`, `/_not-found`, `/robots.txt` e
+  `/sitemap.xml`.
+- Smoke test de produção: `/`, `/robots.txt` e `/sitemap.xml` responderam
+  HTTP 200; `noindex`, `Disallow: /` e sitemap vazio foram confirmados.
+- Nenhum arquivo foi criado em `src/components` ou `src/features`, não há
+  complexidade estrutural sem uso concreto e não há referência à identidade da
+  Emilly no código-fonte.
+
+Pendências e limites: a aplicação ainda é um scaffold mínimo; o template
+neutro do EPIC-02, conteúdo de marca, domínio e indexação pública ainda não
+foram implementados. Supabase, Storage, Vercel, Analytics e Search Console
+continuam sendo possibilidades futuras. A fundação está pronta para iniciar o
+EPIC-02, sem declarar os EPICs seguintes como concluídos.
 
 ## Demais EPICs
 

@@ -10,7 +10,8 @@ compartilhados, sem forçar a mesma experiência visual para todas as marcas.
 
 ## Estado atual
 
-O repositório concluiu as tarefas PF-001 a PF-007 da fundação. Ainda há apenas o
+O repositório concluiu as tarefas PF-001 a PF-009 da fundação. A auditoria
+confirmou a prontidão estrutural para iniciar o EPIC-02. Ainda há apenas o
 scaffold mínimo do Next.js e a página padrão; identidade visual, componentes de
 portfólio, conteúdo comercial, painel administrativo, métricas e integrações
 ainda não foram implementados. A infraestrutura SEO está preparada, mas a

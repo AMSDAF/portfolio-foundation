@@ -12,8 +12,8 @@ validações.
   validações e documentação.
 - Dependências: nenhuma.
 - Limites: não construir o site comercial completo nem o painel.
-- Estado: PF-001 a PF-007 concluídas; PF-008 está sendo consolidada nesta
-  etapa; PF-009 permanece pendente.
+- Estado: PF-001 a PF-009 concluídas. A fundação está pronta para iniciar o
+  EPIC-02; isso não implica que o template neutro já tenha sido implementado.
 
 ## EPIC-02 — Template Neutro
 
