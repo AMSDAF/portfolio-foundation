@@ -25,3 +25,26 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Siga as convenções de nomes e commits descritas na documentação do projeto.
 - Ao concluir, reporte arquivos alterados, validações executadas, pendências e
   inconsistências encontradas.
+
+## Execução de tarefas do backlog
+
+O `docs/BACKLOG.md` é a fonte oficial de tarefas e critérios de aceite.
+
+Quando receber um identificador como `PF-002`:
+
+1. Leia `docs/BACKLOG.md` e localize a tarefa solicitada.
+2. Consulte `docs/ARCHITECTURE.md` para verificar decisões e restrições técnicas.
+3. Consulte `docs/ROADMAP.md` quando precisar entender dependências ou objetivos do EPIC.
+4. Consulte `docs/DESIGN_SYSTEM.md` quando a tarefa envolver interfaces ou identidade visual.
+5. Consulte o `README.md` e os arquivos reais do projeto para confirmar comandos, versões e configurações.
+6. Verifique os critérios de aceite e o estado atual da implementação.
+7. Execute exclusivamente a tarefa solicitada.
+8. Realize as validações pertinentes.
+9. Atualize o status, os critérios atendidos e as evidências no `docs/BACKLOG.md`.
+10. Apresente um relatório final com resultados, pendências e limitações.
+
+Se uma tarefa estiver incompleta ou bloqueada, registre seu estado real. Nunca declare conclusão sem evidências.
+
+Se houver conflitos entre o backlog, a arquitetura e o código existente, investigue e reporte antes de tomar decisões que alterem o escopo.
+
+Não avance automaticamente para outras tarefas.

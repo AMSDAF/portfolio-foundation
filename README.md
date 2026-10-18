@@ -59,10 +59,10 @@ Dentro de `frontend/`:
 | `npm run dev` | disponível |
 | `npm run build` | disponível |
 | `npm start` | disponível após um build |
-| `npm run lint` | ainda não configurado; previsto na PF-002 |
-| `npm run typecheck` | ainda não configurado; previsto na PF-002 |
-| `npm run format` | ainda não configurado; previsto na PF-002 |
-| `npm run format:check` | ainda não configurado; previsto na PF-002 |
+| `npm run lint` | disponível |
+| `npm run typecheck` | disponível |
+| `npm run format` | disponível |
+| `npm run format:check` | disponível |
 
 ## Estrutura
 

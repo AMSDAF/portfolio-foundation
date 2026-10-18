@@ -5,7 +5,7 @@
 | ID | Tarefa | Status |
 | --- | --- | --- |
 | PF-001 | Inicialização do repositório | Concluída |
-| PF-002 | Configuração das ferramentas | Pendente |
+| PF-002 | Configuração das ferramentas | Concluída |
 | PF-003 | Estrutura arquitetural | Pendente |
 | PF-004 | Configuração e contratos tipados | Pendente |
 | PF-005 | Base visual e estilos globais | Pendente |
@@ -30,7 +30,16 @@ Auditar ESLint; configurar Prettier sem conflitos; verificar TypeScript strict;
 validar scripts `dev`, `build`, `start`, `lint`, `typecheck`, `format` e
 `format:check`; garantir funcionamento dentro de `frontend/`.
 
-Status: pendente. Atualmente `package.json` só declara `dev`, `build` e `start`.
+Status: concluída. ESLint 9 com configuração flat baseada em
+`eslint-config-next/core-web-vitals` e `eslint-config-prettier` foi configurado
+em `frontend/eslint.config.mjs`. Prettier foi configurado em
+`frontend/.prettierrc.json`, com artefatos gerados excluídos em
+`frontend/.prettierignore`.
+
+Scripts validados dentro de `frontend/`: `dev`, `build`, `start`, `lint`,
+`typecheck`, `format` e `format:check`. O build de produção foi concluído; os
+servidores de produção e desenvolvimento responderam HTTP 200 em smoke tests
+locais.
 
 ### PF-003 — Estrutura arquitetural
 
