@@ -53,8 +53,9 @@ composição empilhada em telas estreitas e horizontal em telas maiores; os link
 permanecem disponíveis sem menu colapsável ou JavaScript. O Footer possui
 navegação secundária e CTA neutros, configurados separadamente da apresentação.
 Os componentes `Hero` e `ContentSection` também foram criados para demonstrar
-hierarquia, CTAs e composição neutra na página inicial. A extração deve
-continuar orientada por uso real, não por antecipação.
+hierarquia, CTAs e composição neutra na página inicial. A galeria e o `Card`
+também foram criados com uso concreto, usando mídia SVG local e substituível.
+A extração deve continuar orientada por uso real, não por antecipação.
 
 ## Conteúdo e composição
 

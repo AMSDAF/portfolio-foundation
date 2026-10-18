@@ -32,3 +32,10 @@ export interface ContentSection {
   id: string;
   title: string;
 }
+
+export interface GalleryItem {
+  description?: string;
+  image: ImageReference;
+  link?: LinkContent;
+  title: string;
+}

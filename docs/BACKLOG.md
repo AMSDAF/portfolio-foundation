@@ -154,7 +154,7 @@ EPIC-02, sem declarar os EPICs seguintes como concluídos.
 | PF-012 | Implementação do Header e navegação responsiva | Concluída | PF-011 |
 | PF-013 | Implementação do Footer e CTAs institucionais | Concluída | PF-011 |
 | PF-014 | Implementação de Hero, seções e CTAs de conteúdo | Concluída | PF-010, PF-011 |
-| PF-015 | Implementação de galeria e cards reutilizáveis | Planejada | PF-010, PF-011 |
+| PF-015 | Implementação de galeria e cards reutilizáveis | Concluída | PF-010, PF-011 |
 | PF-016 | Composição da página inicial do template | Planejada | PF-012, PF-013, PF-014, PF-015 |
 | PF-017 | Validação de responsividade e estados de interação | Planejada | PF-016 |
 | PF-018 | Validação de acessibilidade e navegação por teclado | Planejada | PF-016 |
@@ -279,6 +279,14 @@ Critérios de aceite:
 
 Criar galeria e cards apenas com as variações necessárias ao conteúdo de
 demonstração, mantendo dados, mídia e apresentação desacoplados.
+
+Status: concluída. Foram criados os componentes `Gallery` e `Card`, com
+contratos `GalleryItem` e dados neutros em `src/config/site.ts`. A galeria é
+usada concretamente na página inicial, organiza os itens em grade responsiva e
+usa três SVGs locais substituíveis com texto alternativo. O card possui título,
+descrição opcional e ação opcional; quando há ação, o card inteiro é um link
+semântico com foco visível. Não foram introduzidos armazenamento, CDN,
+dependências externas ou conteúdo protegido de terceiros.
 
 Critérios de aceite:
 

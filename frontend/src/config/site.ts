@@ -2,6 +2,7 @@ import type { NavigationItem } from "@/types/navigation";
 import type {
   ContentSection,
   FooterContent,
+  GalleryItem,
   HeroContent,
   SiteContent,
 } from "@/types/content";
@@ -37,6 +38,38 @@ export const siteSections = [
       "Padrões neutros de layout, tipografia e ação formam uma base previsível para futuras páginas e experiências profissionais.",
   },
 ] satisfies ContentSection[];
+
+export const siteGallery = [
+  {
+    title: "Grade modular",
+    description: "Uma composição visual baseada em ritmo e repetição.",
+    image: {
+      alt: "Grade geométrica em tons neutros",
+      src: "/gallery/abstract-grid.svg",
+    },
+    link: {
+      href: "#template-principles",
+      label: "Ver princípio relacionado",
+    },
+  },
+  {
+    title: "Planos sobrepostos",
+    description:
+      "Camadas simples para organizar diferentes níveis de conteúdo.",
+    image: {
+      alt: "Planos abstratos em tons neutros",
+      src: "/gallery/abstract-planes.svg",
+    },
+  },
+  {
+    title: "Contraste controlado",
+    description: "Uma variação neutra para destacar uma informação importante.",
+    image: {
+      alt: "Contraste abstrato em tons neutros",
+      src: "/gallery/abstract-contrast.svg",
+    },
+  },
+] satisfies GalleryItem[];
 
 export const siteNavigation = [
   {

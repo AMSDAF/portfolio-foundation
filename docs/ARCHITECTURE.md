@@ -25,6 +25,10 @@ portfolio-foundation/
 │   │   │   ├── seo.ts
 │   │   │   └── site.ts
 │   │   ├── components/
+│   │   │   ├── card.tsx
+│   │   │   ├── content-section.tsx
+│   │   │   ├── gallery.tsx
+│   │   │   ├── hero.tsx
 │   │   │   └── site-shell.tsx
 │   │   └── types/
 │   │       ├── content.ts
