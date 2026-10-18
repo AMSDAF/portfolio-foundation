@@ -9,7 +9,7 @@
 | PF-003 | Estrutura arquitetural | Concluída |
 | PF-004 | Configuração e contratos tipados | Concluída |
 | PF-005 | Base visual e estilos globais | Concluída |
-| PF-006 | Fundação de SEO | Pendente |
+| PF-006 | Fundação de SEO | Concluída |
 | PF-007 | Testes e validações | Pendente |
 | PF-008 | Documentação do projeto | Pendente — consolidação parcial nesta etapa |
 | PF-009 | Auditoria de encerramento | Pendente |
@@ -88,8 +88,14 @@ ou páginas do EPIC-02, nem aplicada identidade visual da Emilly.
 Preparar Metadata API; implementar robots e sitemap adequadamente; evitar URLs
 canônicas fictícias; documentar dependências de domínio.
 
-Status: pendente. Há apenas metadata genérica no layout atual; robots, sitemap e
-configuração de domínio ainda não existem.
+Status: concluída. A Metadata API agora define `noindex,nofollow` por padrão
+em `frontend/src/app/layout.tsx`. `frontend/src/app/robots.ts` bloqueia
+crawlers enquanto a indexação estiver desativada, e
+`frontend/src/app/sitemap.ts` implementa o contrato do Next.js sem publicar
+URLs quando não há domínio configurado. A política central está em
+`frontend/src/config/seo.ts`, com `indexingEnabled: false` e sem domínio
+inventado. Não há URL canônica nem `metadataBase`; a ativação futura depende de
+domínio real e publicação autorizada.
 
 ### PF-007 — Testes e validações
 

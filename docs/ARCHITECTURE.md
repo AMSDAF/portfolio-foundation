@@ -18,8 +18,11 @@ portfolio-foundation/
 │   │   ├── app/
 │   │   │   ├── globals.css
 │   │   │   ├── layout.tsx
-│   │   │   └── page.tsx
+│   │   │   ├── page.tsx
+│   │   │   ├── robots.ts
+│   │   │   └── sitemap.ts
 │   │   ├── config/
+│   │   │   ├── seo.ts
 │   │   │   └── site.ts
 │   │   └── types/
 │   │       ├── content.ts
@@ -35,8 +38,9 @@ portfolio-foundation/
 
 O código da aplicação permanece em `frontend/`; essa fronteira não deve ser
 reorganizada. `src/config` e `src/types` agora existem porque PF-004 introduziu
-configuração centralizada e contratos compartilhados. Componentes, features e
-lib continuam ausentes porque o scaffold atual ainda não possui
+configuração centralizada e contratos compartilhados; `src/config/seo.ts`
+centraliza a ativação explícita da indexação definida na PF-006. Componentes,
+features e lib continuam ausentes porque o scaffold atual ainda não possui
 responsabilidades que justifiquem essas camadas.
 
 ## Responsabilidades dos diretórios
@@ -49,7 +53,7 @@ Quando forem necessários, os diretórios terão responsabilidades distintas:
 - `src/features/`: fluxos ou áreas de negócio que combinam apresentação,
   comportamento e dados da própria feature.
 - `src/config/`: configuração estática da aplicação e integrações, sem lógica
-  de apresentação.
+  de apresentação. Inclui a configuração do site e a política de SEO.
 - `src/lib/`: utilitários e serviços independentes de componentes React.
 - `src/types/`: contratos TypeScript compartilhados quando não pertencerem a
   uma feature específica. Atualmente contém os contratos neutros de conteúdo e
@@ -82,12 +86,13 @@ quando melhorar a clareza, sem substituir a separação de responsabilidades.
 2. Conteúdo estático primeiro; persistência e painel vêm depois.
 3. Separar dados, contratos tipados e apresentação. A configuração estática
    fica em `src/config`, enquanto os contratos ficam em `src/types`.
-4. Extrair componentes compartilhados somente após existir necessidade concreta.
-5. O núcleo não pode depender da identidade visual da Emilly.
-6. Reutilizar infraestrutura e componentes quando fizer sentido, sem exigir que
+4. A indexação permanece desativada até existir domínio e publicação autorizada.
+5. Extrair componentes compartilhados somente após existir necessidade concreta.
+6. O núcleo não pode depender da identidade visual da Emilly.
+7. Reutilizar infraestrutura e componentes quando fizer sentido, sem exigir que
    toda implementação tenha a mesma experiência visual.
-7. Evitar sistemas de plugins, temas e abstrações genéricas sem caso de uso.
-8. Não adicionar banco de dados à fundação antes do EPIC-04.
+8. Evitar sistemas de plugins, temas e abstrações genéricas sem caso de uso.
+9. Não adicionar banco de dados à fundação antes do EPIC-04.
 
 ## Tecnologias futuras
 
@@ -106,6 +111,8 @@ como dependência atual.
 - Dados não devem importar componentes de apresentação.
 - `config` pode importar contratos de `types`, mas `types` não pode importar
   configuração ou componentes.
+- `robots.ts` e `sitemap.ts` devem consumir a política de SEO centralizada, sem
+  duplicar domínio ou estado de indexação.
 - Integrações externas devem ficar atrás de limites claros e só serão
   introduzidas quando a tarefa correspondente for iniciada.
 - Evitar dependências circulares e manter aliases relativos ao `@/*` existente.

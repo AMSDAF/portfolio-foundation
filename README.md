@@ -10,11 +10,13 @@ compartilhados, sem forçar a mesma experiência visual para todas as marcas.
 
 ## Estado atual
 
-O repositório está na PF-001 — Inicialização do repositório. Há apenas o scaffold
-mínimo do Next.js e a página padrão. Identidade visual, componentes de portfólio,
-conteúdo comercial, painel administrativo, métricas e integrações ainda não foram
-implementados. Consulte o [roadmap](./docs/ROADMAP.md) e o
-[backlog](./docs/BACKLOG.md) para o estado detalhado.
+O repositório concluiu as tarefas PF-001 a PF-006 da fundação. Ainda há apenas o
+scaffold mínimo do Next.js e a página padrão; identidade visual, componentes de
+portfólio, conteúdo comercial, painel administrativo, métricas e integrações
+ainda não foram implementados. A infraestrutura SEO está preparada, mas a
+indexação permanece desativada até existir domínio e publicação autorizada.
+Consulte o [roadmap](./docs/ROADMAP.md) e o [backlog](./docs/BACKLOG.md) para o
+estado detalhado.
 
 ## Stack instalada
 
@@ -73,7 +75,7 @@ portfolio-foundation/
 │   ├── public/
 │   ├── src/
 │   │   ├── app/          # App Router e tela inicial atual
-│   │   ├── config/       # Configuração estática do site
+│   │   ├── config/       # Configuração estática do site e SEO
 │   │   └── types/        # Contratos compartilhados
 │   ├── next.config.ts
 │   ├── package.json
@@ -91,6 +93,10 @@ Os diretórios de componentes, features e bibliotecas serão criados quando
 houver responsabilidades concretas para eles. Os diretórios de configuração e
 tipos já existem porque centralizam contratos e dados estáticos do scaffold
 atual; nenhuma camada adicional é criada antecipadamente.
+
+A indexação está desativada por padrão: não há domínio, URL canônica ou
+publicação autorizada configurados. A ativação de SEO público deve definir um
+domínio real e alterar explicitamente a política em `src/config/seo.ts`.
 
 ## Documentação
 
