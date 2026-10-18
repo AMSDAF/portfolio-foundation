@@ -23,7 +23,7 @@ export function SiteShell({ children }: SiteShellProps) {
               {siteNavigation.map((item) => (
                 <li key={item.href}>
                   <Link
-                    className="rounded-sm underline-offset-4 hover:text-content hover:underline"
+                    className="rounded-sm underline-offset-4 hover:text-content hover:underline active:underline"
                     href={item.href}
                   >
                     {item.label}
@@ -49,7 +49,7 @@ export function SiteShell({ children }: SiteShellProps) {
                   {siteFooter.navigation.map((item) => (
                     <li key={item.href}>
                       <Link
-                        className="rounded-sm underline-offset-4 hover:text-content hover:underline"
+                        className="rounded-sm underline-offset-4 hover:text-content hover:underline active:underline"
                         href={item.href}
                       >
                         {item.label}
@@ -61,7 +61,7 @@ export function SiteShell({ children }: SiteShellProps) {
             </div>
 
             <Link
-              className="inline-flex w-fit rounded-sm border border-content bg-content px-4 py-2 text-sm font-medium text-canvas hover:bg-content-muted focus-visible:outline"
+              className="inline-flex w-fit rounded-sm border border-content bg-content px-4 py-2 text-sm font-medium text-canvas transition-transform hover:bg-content-muted focus-visible:outline active:translate-y-px"
               href={siteFooter.cta.href}
             >
               {siteFooter.cta.label}

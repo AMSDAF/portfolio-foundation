@@ -34,7 +34,7 @@ export function Card({ content }: CardProps) {
 
   return content.link ? (
     <Link
-      className="block overflow-hidden rounded-sm border border-border bg-canvas transition-colors hover:border-content-muted focus-visible:outline"
+      className="block overflow-hidden rounded-sm border border-border bg-canvas transition-transform hover:border-content-muted focus-visible:outline active:translate-y-px"
       href={content.link.href}
     >
       {cardContent}

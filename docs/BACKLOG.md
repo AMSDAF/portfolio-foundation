@@ -156,7 +156,7 @@ EPIC-02, sem declarar os EPICs seguintes como concluídos.
 | PF-014 | Implementação de Hero, seções e CTAs de conteúdo | Concluída | PF-010, PF-011 |
 | PF-015 | Implementação de galeria e cards reutilizáveis | Concluída | PF-010, PF-011 |
 | PF-016 | Composição da página inicial do template | Concluída | PF-012, PF-013, PF-014, PF-015 |
-| PF-017 | Validação de responsividade e estados de interação | Planejada | PF-016 |
+| PF-017 | Validação de responsividade e estados de interação | Concluída | PF-016 |
 | PF-018 | Validação de acessibilidade e navegação por teclado | Planejada | PF-016 |
 | PF-019 | Validação final, documentação e encerramento do EPIC-02 | Planejada | PF-017, PF-018 |
 
@@ -328,6 +328,19 @@ Critérios de aceite:
 
 Verificar e ajustar o comportamento do template em larguras móveis, médias e
 desktop, incluindo estados interativos e ausência de overflow.
+
+Status: concluída. Foram verificadas as larguras de viewport 320, 375, 768 e
+1280 px em execução local. Em todas, `document.documentElement.scrollWidth` não
+excedeu `window.innerWidth`; Header, navegação, Hero, seções, galeria, cards,
+CTAs e Footer permaneceram dentro da viewport. Em telas estreitas o Header e o
+Footer ficam empilhados, enquanto a galeria usa uma coluna; em telas médias e
+desktop a navegação e o Footer podem alinhar-se horizontalmente e a galeria
+usa duas e três colunas, respectivamente. Links e CTAs foram ajustados para
+manter foco visível, hover e feedback de ativação por sublinhado ou movimento,
+sem depender apenas de cor. A validação foi feita no navegador integrado contra
+`http://localhost:3000`; o servidor já existente foi reutilizado, e um
+servidor adicional não foi iniciado por a porta estar ocupada. Não foi feita
+validação de acessibilidade por teclado nesta tarefa, pois pertence à PF-018.
 
 Critérios de aceite:
 

@@ -57,6 +57,9 @@ hierarquia, CTAs e composição neutra na página inicial. A galeria e o `Card`
 também foram criados com uso concreto, usando mídia SVG local e substituível.
 A extração deve continuar orientada por uso real, não por antecipação.
 
+Os links e CTAs do template usam foco visível, hover e feedback de ativação por
+movimento/decoração, sem depender apenas de mudança de cor.
+
 ## Conteúdo e composição
 
 Conteúdo deve permanecer separado da apresentação quando a estrutura de páginas

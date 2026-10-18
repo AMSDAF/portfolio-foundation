@@ -27,7 +27,7 @@ export function Hero({ content }: HeroProps) {
             <div className="mt-8 flex flex-wrap gap-4">
               {content.actions.map((action) => (
                 <Link
-                  className="inline-flex rounded-sm border border-content bg-content px-4 py-2 text-sm font-medium text-canvas hover:bg-content-muted focus-visible:outline"
+                  className="inline-flex rounded-sm border border-content bg-content px-4 py-2 text-sm font-medium text-canvas transition-transform hover:bg-content-muted focus-visible:outline active:translate-y-px"
                   href={action.href}
                   key={action.href}
                 >
