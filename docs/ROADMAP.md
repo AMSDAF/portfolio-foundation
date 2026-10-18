@@ -17,14 +17,28 @@ validações.
 
 ## EPIC-02 — Template Neutro
 
-Construir interface navegável em tons de cinza com layouts e componentes
-reutilizáveis.
+Construir uma interface navegável em tons de cinza, com conteúdo de demonstração
+neutro, layouts e componentes reutilizáveis orientados por uso real.
 
-- Entregáveis: Header, Footer, Hero, seções, galerias, cards, CTAs, navegação e
-  responsividade.
-- Dependências: fundação e decisões de PF-001 a PF-009.
-- Limites: não aplicar identidade visual de uma marca.
-- Estado: futuro.
+- Entregáveis: contratos e dados de demonstração, shell da aplicação, Header,
+  Footer, navegação, Hero, seções, galeria, cards, CTAs, composição da página
+  inicial, estados responsivos e validações de acessibilidade.
+- Dependências: PF-001 a PF-009 concluídas; uso dos contratos de
+  `frontend/src/types/`, da configuração existente e dos tokens neutros de
+  `frontend/src/app/globals.css`. Não depende de banco, armazenamento,
+  autenticação, domínio ou serviço externo.
+- Sequência: PF-010 e PF-011 estabelecem contratos e shell; PF-012 a PF-015
+  entregam componentes; PF-016 compõe a página; PF-017 e PF-018 validam
+  comportamento responsivo e acessibilidade; PF-019 encerra o epic com
+  validação e documentação.
+- Critério de saída: a aplicação deve oferecer uma página inicial navegável,
+  responsiva e acessível em conteúdo neutro, com componentes reutilizáveis
+  somente onde houver uso concreto, sem dependência de identidade de marca.
+- Limites: não aplicar identidade visual da Emilly, não publicar conteúdo
+  comercial real, não criar CMS, backend, autenticação, persistência,
+  integrações de métricas ou sistema de temas/plugins; a indexação continua
+  desativada conforme a fundação.
+- Estado: planejado; tarefas detalhadas em PF-010 a PF-019 no backlog.
 
 ## EPIC-03 — Emilly Araújo Fotografia
 
