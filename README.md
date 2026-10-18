@@ -10,12 +10,13 @@ compartilhados, sem forçar a mesma experiência visual para todas as marcas.
 
 ## Estado atual
 
-O repositório concluiu as tarefas PF-001 a PF-009 da fundação e PF-011 do
-EPIC-02. O shell estrutural já envolve a aplicação com Header, navegação
-principal, conteúdo principal e Footer; os componentes de conteúdo, identidade
-visual, conteúdo comercial, painel administrativo, métricas e integrações ainda
-não foram implementados. A infraestrutura SEO está preparada, mas a indexação
-permanece desativada até existir domínio e publicação autorizada.
+O repositório concluiu as tarefas PF-001 a PF-009 da fundação e PF-011 a PF-016
+do EPIC-02. O shell estrutural envolve a aplicação com Header, navegação
+principal, conteúdo principal e Footer; a página inicial também compõe Hero,
+seções, galeria, cards e CTAs neutros. Identidade visual, conteúdo comercial,
+painel administrativo, métricas e integrações ainda não foram implementados. A
+infraestrutura SEO está preparada, mas a indexação permanece desativada até
+existir domínio e publicação autorizada.
 Consulte o [roadmap](./docs/ROADMAP.md) e o [backlog](./docs/BACKLOG.md) para o
 estado detalhado.
 

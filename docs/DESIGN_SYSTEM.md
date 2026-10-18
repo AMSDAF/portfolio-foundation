@@ -62,7 +62,9 @@ A extração deve continuar orientada por uso real, não por antecipação.
 Conteúdo deve permanecer separado da apresentação quando a estrutura de páginas
 for criada. A fundação pode compartilhar layout e comportamento, mas cada
 implementação pode compor suas páginas e sua hierarquia de conteúdo de maneira
-própria.
+própria. A página inicial neutra já compõe o shell, Hero, seções, galeria,
+cards e CTAs em uma sequência navegável; a identidade visual específica
+continua fora do template.
 
 ## Limites
 

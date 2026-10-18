@@ -155,7 +155,7 @@ EPIC-02, sem declarar os EPICs seguintes como concluídos.
 | PF-013 | Implementação do Footer e CTAs institucionais | Concluída | PF-011 |
 | PF-014 | Implementação de Hero, seções e CTAs de conteúdo | Concluída | PF-010, PF-011 |
 | PF-015 | Implementação de galeria e cards reutilizáveis | Concluída | PF-010, PF-011 |
-| PF-016 | Composição da página inicial do template | Planejada | PF-012, PF-013, PF-014, PF-015 |
+| PF-016 | Composição da página inicial do template | Concluída | PF-012, PF-013, PF-014, PF-015 |
 | PF-017 | Validação de responsividade e estados de interação | Planejada | PF-016 |
 | PF-018 | Validação de acessibilidade e navegação por teclado | Planejada | PF-016 |
 | PF-019 | Validação final, documentação e encerramento do EPIC-02 | Planejada | PF-017, PF-018 |
@@ -303,6 +303,15 @@ Critérios de aceite:
 
 Compor a página inicial navegável a partir dos componentes entregues, mantendo
 uma experiência demonstrável e neutra.
+
+Status: concluída. `src/app/page.tsx` compõe o Header e o Footer fornecidos pelo
+shell com Hero, duas seções de conteúdo, galeria e cards. Os dados vêm de
+`src/config/site.ts`, e os CTAs e links apontam para âncoras internas existentes
+(`#template-overview`, `#template-principles` e `#main-content`). A composição
+mantém um único `h1`, não contém identidade ou conteúdo comercial da Emilly e
+preserva a política de indexação desativada. A validação executada nesta tarefa
+passou com `npm run lint`, `npm run typecheck`, `npm run test` e
+`npm run format:check`; o build será repetido ao final desta execução.
 
 Critérios de aceite:
 
