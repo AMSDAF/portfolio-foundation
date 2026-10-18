@@ -1,76 +1,96 @@
 # Portfolio Foundation
 
-Base web reutilizável para portfólios profissionais. A primeira implementação será
-o portfólio da Emilly Araújo Fotografia; posteriormente, a fundação poderá ser
-adaptada para um portfólio de desenvolvedor.
+Fundação web reutilizável para portfólios profissionais. A primeira implementação
+planejada é o portfólio comercial da Emilly Araújo Fotografia; posteriormente, a
+mesma infraestrutura poderá apoiar um portfólio de desenvolvedor.
 
-Esta etapa (PF-001) contém somente a infraestrutura inicial e a página padrão
-mínima do Next.js. Identidade visual, Design System, componentes de portfólio,
-funcionalidades comerciais e integrações ficam para etapas futuras.
+O projeto não pretende ser um SaaS, CMS genérico ou construtor visual. A
+reutilização deve concentrar-se em infraestrutura e componentes comprovadamente
+compartilhados, sem forçar a mesma experiência visual para todas as marcas.
 
-## Stack
+## Estado atual
 
-- Next.js 16 com App Router e Turbopack.
-- React 19.
-- TypeScript 5 com verificação estrita.
-- Tailwind CSS 4 com configuração padrão do `create-next-app`.
-- npm como gerenciador de pacotes e código em `src/`.
+O repositório está na PF-001 — Inicialização do repositório. Há apenas o scaffold
+mínimo do Next.js e a página padrão. Identidade visual, componentes de portfólio,
+conteúdo comercial, painel administrativo, métricas e integrações ainda não foram
+implementados. Consulte o [roadmap](./docs/ROADMAP.md) e o
+[backlog](./docs/BACKLOG.md) para o estado detalhado.
 
-As versões instaladas são registradas no `package-lock.json`.
+## Stack instalada
+
+- Next.js 16.4.1 com App Router e Turbopack.
+- React e React DOM 19.3.0.
+- TypeScript 5.9.3 com `strict` habilitado.
+- Tailwind CSS 4.3.3, integrado pelo `@tailwindcss/turbopack`.
+- npm.
+
+As versões efetivamente instaladas têm como fonte de verdade o
+[`frontend/package-lock.json`](./frontend/package-lock.json). Supabase, Vercel,
+Google Analytics, Search Console e armazenamento de imagens são possibilidades
+futuras, não integrações atuais.
 
 ## Requisitos
 
-- Node.js 20.9.0 ou superior (preferencialmente uma versão LTS suportada).
+- Node.js 20.9.0 ou superior.
 - npm disponível no ambiente.
 
-Não são necessárias variáveis de ambiente ou serviços externos nesta etapa.
+Não são necessárias variáveis de ambiente ou serviços externos para o scaffold
+atual.
 
 ## Instalação e desenvolvimento
 
-No diretório raiz do projeto, instale as dependências:
+Os comandos da aplicação devem ser executados dentro de `frontend/`:
 
 ```bash
+cd frontend
 npm ci
-```
-
-Inicie o servidor de desenvolvimento:
-
-```bash
 npm run dev
 ```
 
-Acesse [http://localhost:3000](http://localhost:3000). As alterações em
-`src/app/page.tsx` são refletidas automaticamente durante o desenvolvimento.
-Para encerrar o servidor, pressione `Ctrl+C`.
+Acesse [http://localhost:3000](http://localhost:3000). Para encerrar o servidor,
+pressione `Ctrl+C`.
 
-## Produção
+## Comandos disponíveis atualmente
 
-Gere o build de produção:
+Dentro de `frontend/`:
 
-```bash
-npm run build
-```
+| Comando | Situação |
+| --- | --- |
+| `npm run dev` | disponível |
+| `npm run build` | disponível |
+| `npm start` | disponível após um build |
+| `npm run lint` | ainda não configurado; previsto na PF-002 |
+| `npm run typecheck` | ainda não configurado; previsto na PF-002 |
+| `npm run format` | ainda não configurado; previsto na PF-002 |
+| `npm run format:check` | ainda não configurado; previsto na PF-002 |
 
-Após o build, inicie o servidor de produção:
-
-```bash
-npm start
-```
-
-## Estrutura inicial
+## Estrutura
 
 ```text
-src/app/
-  globals.css  # Importação padrão do Tailwind CSS
-  layout.tsx   # Layout raiz e metadados genéricos
-  page.tsx     # Página inicial mínima
-next.config.ts # Configuração do Next.js e integração Tailwind/Turbopack
-tsconfig.json  # Configuração do TypeScript e alias @/* para src/*
+portfolio-foundation/
+├── docs/                 # visão, arquitetura, design system e planejamento
+├── frontend/
+│   ├── public/
+│   ├── src/app/          # App Router e tela inicial atual
+│   ├── next.config.ts
+│   ├── package.json
+│   └── tsconfig.json
+├── .gitignore
+├── AGENTS.md
+└── README.md
 ```
 
-O Tailwind CSS 4 utiliza `@import "tailwindcss"` no CSS global e o carregador
-`@tailwindcss/turbopack` configurado pelo gerador oficial. Não há tema personalizado
-ou necessidade de um arquivo `tailwind.config` nesta configuração padrão.
+O alias `@/*` aponta para `frontend/src/*`. O Tailwind CSS 4 usa
+`@import "tailwindcss"` em `frontend/src/app/globals.css`; ainda não há tokens
+customizados nem arquivo `tailwind.config`.
 
-Referências: [instalação do Next.js](https://nextjs.org/docs/app/getting-started/installation)
-e [Tailwind CSS](https://tailwindcss.com/docs).
+## Documentação
+
+- [Arquitetura](./docs/ARCHITECTURE.md)
+- [Design System](./docs/DESIGN_SYSTEM.md)
+- [Roadmap](./docs/ROADMAP.md)
+- [Backlog](./docs/BACKLOG.md)
+
+As decisões e o planejamento devem permanecer consistentes com o código
+implementado. Mudanças de escopo devem ser registradas na documentação
+correspondente.
