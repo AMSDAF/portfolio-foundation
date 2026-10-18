@@ -1,7 +1,14 @@
+import { ContentSection } from "@/components/content-section";
+import { Hero } from "@/components/hero";
+import { siteHero, siteSections } from "@/config/site";
+
 export default function Home() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 py-16">
-      <div>Hello world!</div>
-    </div>
+    <>
+      <Hero content={siteHero} />
+      {siteSections.map((section) => (
+        <ContentSection content={section} key={section.id} />
+      ))}
+    </>
   );
 }

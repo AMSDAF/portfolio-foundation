@@ -50,8 +50,10 @@ navegação e padrões responsivos. O shell estrutural em
 `frontend/src/components/site-shell.tsx` já fornece Header, navegação
 principal, conteúdo principal e Footer no layout raiz. O Header usa uma
 composição empilhada em telas estreitas e horizontal em telas maiores; os links
-permanecem disponíveis sem menu colapsável ou JavaScript. Os componentes de
-conteúdo ainda serão implementados nas tarefas seguintes. A extração deve
+permanecem disponíveis sem menu colapsável ou JavaScript. O Footer possui
+navegação secundária e CTA neutros, configurados separadamente da apresentação.
+Os componentes `Hero` e `ContentSection` também foram criados para demonstrar
+hierarquia, CTAs e composição neutra na página inicial. A extração deve
 continuar orientada por uso real, não por antecipação.
 
 ## Conteúdo e composição

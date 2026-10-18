@@ -21,3 +21,14 @@ export interface SiteContent {
   hero?: HeroContent;
   title: string;
 }
+
+export interface FooterContent {
+  navigation: LinkContent[];
+  cta: LinkContent;
+}
+
+export interface ContentSection {
+  description: string;
+  id: string;
+  title: string;
+}

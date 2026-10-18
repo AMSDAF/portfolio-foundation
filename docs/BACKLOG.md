@@ -152,8 +152,8 @@ EPIC-02, sem declarar os EPICs seguintes como concluídos.
 | PF-010 | Definição dos contratos e dados neutros do template | Planejada | PF-004, PF-005 |
 | PF-011 | Implementação do shell, layout e navegação | Concluída | PF-010 |
 | PF-012 | Implementação do Header e navegação responsiva | Concluída | PF-011 |
-| PF-013 | Implementação do Footer e CTAs institucionais | Planejada | PF-011 |
-| PF-014 | Implementação de Hero, seções e CTAs de conteúdo | Planejada | PF-010, PF-011 |
+| PF-013 | Implementação do Footer e CTAs institucionais | Concluída | PF-011 |
+| PF-014 | Implementação de Hero, seções e CTAs de conteúdo | Concluída | PF-010, PF-011 |
 | PF-015 | Implementação de galeria e cards reutilizáveis | Planejada | PF-010, PF-011 |
 | PF-016 | Composição da página inicial do template | Planejada | PF-012, PF-013, PF-014, PF-015 |
 | PF-017 | Validação de responsividade e estados de interação | Planejada | PF-016 |
@@ -234,6 +234,14 @@ Implementar Footer neutro com navegação secundária e CTAs de demonstração
 compatíveis com os contratos definidos, sem publicar contatos ou URLs de
 produção.
 
+Status: concluída. O Footer do `src/components/site-shell.tsx` agora consome
+`siteFooter`, com navegação secundária e CTA configurados em
+`src/config/site.ts`, além da descrição neutra do site. O conteúdo foi separado
+da apresentação por contratos em `src/types/content.ts`; o CTA usa um destino
+interno válido para o conteúdo principal, sem telefone, e-mail, redes sociais,
+depoimentos ou URLs de produção. Os links possuem foco visível e estados
+visuais de interação, e o layout adapta-se a telas estreitas e maiores.
+
 Critérios de aceite:
 
 - O Footer usa região semântica, mantém hierarquia visual clara e não repete
@@ -249,6 +257,13 @@ Critérios de aceite:
 
 Criar os padrões de Hero e seções necessários para demonstrar hierarquia de
 conteúdo, chamadas para ação e composição editorial neutra.
+
+Status: concluída. Foram criados os componentes `Hero` e `ContentSection`, com
+dados neutros configurados em `src/config/site.ts` e contratos em
+`src/types/content.ts`. A página inicial usa um único `h1`, duas seções com
+hierarquia `h2` e CTA interno com rótulo descritivo. Os CTAs usam contraste,
+foco visível e estados de hover, sem estilos inline, tokens de marca, serviços,
+categorias, campanhas ou conteúdo comercial da Emilly.
 
 Critérios de aceite:
 
