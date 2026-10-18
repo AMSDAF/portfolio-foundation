@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | PF-001 | Inicialização do repositório | Concluída |
 | PF-002 | Configuração das ferramentas | Concluída |
-| PF-003 | Estrutura arquitetural | Pendente |
+| PF-003 | Estrutura arquitetural | Concluída |
 | PF-004 | Configuração e contratos tipados | Pendente |
 | PF-005 | Base visual e estilos globais | Pendente |
 | PF-006 | Fundação de SEO | Pendente |
@@ -47,9 +47,17 @@ Definir responsabilidades de diretórios; organizar componentes, features,
 config, lib e types conforme necessidade; configurar aliases; evitar
 dependências circulares; não acoplar a identidade da Emilly ao núcleo.
 
-Status: pendente. A arquitetura aprovada está registrada em
-[ARCHITECTURE.md](./ARCHITECTURE.md), mas ainda não foi implementada além do
-scaffold mínimo.
+Status: concluída. As responsabilidades de `app`, `components`, `features`,
+`config`, `lib` e `types`, além das regras de dependência e reutilização, estão
+registradas em [ARCHITECTURE.md](./ARCHITECTURE.md). A estrutura atual mantém
+somente `src/app`, pois não há uso concreto para as demais camadas no scaffold
+existente; diretórios vazios não foram criados para evitar complexidade
+desnecessária.
+
+O alias `@/*` foi verificado em `frontend/tsconfig.json` e aponta para
+`frontend/src/*`. ESLint e TypeScript foram executados sem erros, fornecendo
+validação de imports e tipos para a estrutura atual. Não foram identificadas
+dependências circulares.
 
 ### PF-004 — Configuração e contratos tipados
 

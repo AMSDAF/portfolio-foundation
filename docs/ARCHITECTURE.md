@@ -7,7 +7,7 @@ O Portfolio Foundation é uma única aplicação Next.js inicialmente. Seu objet
 Emilly Araújo Fotografia e podendo receber uma segunda implementação para um
 desenvolvedor de software. Não é um SaaS, CMS genérico ou construtor visual.
 
-## Estrutura atual e aprovada
+## Estrutura atual
 
 ```text
 portfolio-foundation/
@@ -28,10 +28,30 @@ portfolio-foundation/
 └── README.md
 ```
 
-O código da aplicação permanece em `frontend/`; não reorganizar essa fronteira.
-No estado atual ainda não existem diretórios de componentes, features, config,
-lib ou types. Eles devem ser criados apenas quando a necessidade da
-implementação justificar sua responsabilidade.
+O código da aplicação permanece em `frontend/`; essa fronteira não deve ser
+reorganizada. A estrutura atual é suficiente para PF-001 e PF-002. Não existem
+diretórios de componentes, features, config, lib ou types porque o scaffold
+atual ainda não possui responsabilidades que justifiquem essas camadas.
+
+## Responsabilidades dos diretórios
+
+Quando forem necessários, os diretórios terão responsabilidades distintas:
+
+- `src/app/`: rotas, layouts e arquivos reconhecidos pelo App Router.
+- `src/components/`: componentes de interface compartilháveis e sem conteúdo
+  específico de uma marca.
+- `src/features/`: fluxos ou áreas de negócio que combinam apresentação,
+  comportamento e dados da própria feature.
+- `src/config/`: configuração estática da aplicação e integrações, sem lógica
+  de apresentação.
+- `src/lib/`: utilitários e serviços independentes de componentes React.
+- `src/types/`: contratos TypeScript compartilhados quando não pertencerem a
+  uma feature específica.
+
+Esses diretórios não devem ser criados apenas como scaffolding vazio. Uma
+feature pode manter seus tipos, dados e utilitários próximos dela quando isso
+reduzir acoplamento; mover algo para uma camada compartilhada exige uso
+concreto em mais de um ponto.
 
 ## Tecnologias atuais
 
@@ -44,6 +64,10 @@ implementação justificar sua responsabilidade.
 As versões e configurações instaladas estão em
 `frontend/package.json`, `frontend/package-lock.json`, `frontend/tsconfig.json`
 e `frontend/next.config.ts`.
+
+O alias `@/*` já está configurado em `frontend/tsconfig.json` para apontar para
+`frontend/src/*`. Ele deve ser usado para imports entre áreas da aplicação
+quando melhorar a clareza, sem substituir a separação de responsabilidades.
 
 ## Decisões arquiteturais
 
@@ -67,12 +91,20 @@ como dependência atual.
 
 ## Regras de dependência
 
-- Rotas e layouts podem compor componentes e dados; dados não devem importar
-  componentes de apresentação.
-- Componentes compartilhados não devem importar conteúdo específico de uma marca.
+- `app` pode compor `features`, `components`, `config`, `lib` e `types`.
+- `features` pode usar componentes compartilhados, configuração, lib e tipos,
+  mas não deve ser importada por uma feature irmã.
+- `components` não deve importar conteúdo específico de uma marca ou feature.
+- `config`, `lib` e `types` não devem importar componentes de apresentação.
+- Dados não devem importar componentes de apresentação.
 - Integrações externas devem ficar atrás de limites claros e só serão
   introduzidas quando a tarefa correspondente for iniciada.
 - Evitar dependências circulares e manter aliases relativos ao `@/*` existente.
+
+O fluxo preferencial é direcionado para dentro: `app` compõe as camadas
+inferiores, enquanto as camadas inferiores não importam rotas nem a identidade
+de uma implementação. Dependências entre áreas devem ser introduzidas somente
+quando houver uma relação funcional explícita.
 
 ## Convenções
 

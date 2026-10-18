@@ -84,6 +84,10 @@ O alias `@/*` aponta para `frontend/src/*`. O Tailwind CSS 4 usa
 `@import "tailwindcss"` em `frontend/src/app/globals.css`; ainda não há tokens
 customizados nem arquivo `tailwind.config`.
 
+Os diretórios de componentes, features, configuração, bibliotecas e tipos serão
+criados quando houver responsabilidades concretas para eles. O scaffold atual
+não cria camadas vazias antecipadamente.
+
 ## Documentação
 
 - [Arquitetura](./docs/ARCHITECTURE.md)
