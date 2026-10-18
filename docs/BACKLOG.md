@@ -11,7 +11,7 @@
 | PF-005 | Base visual e estilos globais | Concluída |
 | PF-006 | Fundação de SEO | Concluída |
 | PF-007 | Testes e validações | Concluída |
-| PF-008 | Documentação do projeto | Pendente — consolidação parcial nesta etapa |
+| PF-008 | Documentação do projeto | Concluída |
 | PF-009 | Auditoria de encerramento | Pendente |
 
 ### PF-001 — Inicialização do repositório
@@ -112,8 +112,11 @@ configurado e executado. Também foram validados `typecheck`, `lint`,
 Manter README, roadmap, backlog, arquitetura e design system atualizados, com
 comandos, decisões e validações consistentes com o código.
 
-Status: pendente. Esta tarefa cria a base documental solicitada, mas sua
-conclusão depende de revisão posterior.
+Status: concluída. README, roadmap, backlog, arquitetura e design system foram
+revisados contra o código atual. Comandos, versões, estrutura, decisões,
+política de SEO e validações estão registrados sem declarar como implementadas
+as tecnologias futuras. O estado do backlog permanece PF-001 a PF-008
+concluídas e PF-009 pendente.
 
 ### PF-009 — Auditoria de encerramento
 

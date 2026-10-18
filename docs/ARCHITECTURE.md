@@ -27,6 +27,9 @@ portfolio-foundation/
 │   │   └── types/
 │   │       ├── content.ts
 │   │       └── navigation.ts
+│   ├── tests/
+│   │   └── seo.test.ts
+│   ├── vitest.config.ts
 │   ├── next.config.ts
 │   ├── package.json
 │   ├── package-lock.json
@@ -58,6 +61,8 @@ Quando forem necessários, os diretórios terão responsabilidades distintas:
 - `src/types/`: contratos TypeScript compartilhados quando não pertencerem a
   uma feature específica. Atualmente contém os contratos neutros de conteúdo e
   navegação.
+- `tests/`: testes unitários da fundação, sem dependência da interface ou de
+  serviços externos.
 
 Esses diretórios não devem ser criados apenas como scaffolding vazio. Uma
 feature pode manter seus tipos, dados e utilitários próximos dela quando isso
@@ -70,11 +75,12 @@ concreto em mais de um ponto.
 - React e React DOM 19.3.0.
 - TypeScript 5.9.3, com `strict: true`.
 - Tailwind CSS 4.3.3 e `@tailwindcss/turbopack`.
+- Vitest 3.2.4 para testes unitários.
 - npm.
 
 As versões e configurações instaladas estão em
-`frontend/package.json`, `frontend/package-lock.json`, `frontend/tsconfig.json`
-e `frontend/next.config.ts`.
+`frontend/package.json`, `frontend/package-lock.json`, `frontend/tsconfig.json`,
+`frontend/next.config.ts` e `frontend/vitest.config.ts`.
 
 O alias `@/*` já está configurado em `frontend/tsconfig.json` para apontar para
 `frontend/src/*`. Ele deve ser usado para imports entre áreas da aplicação

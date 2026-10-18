@@ -12,8 +12,8 @@ validações.
   validações e documentação.
 - Dependências: nenhuma.
 - Limites: não construir o site comercial completo nem o painel.
-- Estado: PF-001 concluída conforme evidências disponíveis; PF-002 a PF-009
-  pendentes. Esta consolidação antecipa parte da PF-008, mas não a conclui.
+- Estado: PF-001 a PF-007 concluídas; PF-008 está sendo consolidada nesta
+  etapa; PF-009 permanece pendente.
 
 ## EPIC-02 — Template Neutro
 

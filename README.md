@@ -24,6 +24,7 @@ estado detalhado.
 - React e React DOM 19.3.0.
 - TypeScript 5.9.3 com `strict` habilitado.
 - Tailwind CSS 4.3.3, integrado pelo `@tailwindcss/turbopack`.
+- Vitest 3.2.4 para testes unitários.
 - npm.
 
 As versões efetivamente instaladas têm como fonte de verdade o
