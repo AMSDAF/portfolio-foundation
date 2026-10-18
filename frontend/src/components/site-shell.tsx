@@ -10,16 +10,16 @@ export function SiteShell({ children }: SiteShellProps) {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="border-b border-border bg-canvas">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-6 py-5">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-6 sm:py-5">
           <Link
-            className="font-semibold tracking-tight text-content focus-visible:outline"
+            className="min-w-0 font-semibold tracking-tight text-content focus-visible:outline"
             href="/"
           >
             {siteContent.title}
           </Link>
 
-          <nav aria-label="Navegação principal">
-            <ul className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 text-sm text-content-muted">
+          <nav aria-label="Navegação principal" className="w-full sm:w-auto">
+            <ul className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-content-muted sm:justify-end">
               {siteNavigation.map((item) => (
                 <li key={item.href}>
                   <Link

@@ -48,10 +48,11 @@ concretas do EPIC-02.
 O EPIC-02 poderá incluir Header, Footer, Hero, seções, galerias, cards, CTAs,
 navegação e padrões responsivos. O shell estrutural em
 `frontend/src/components/site-shell.tsx` já fornece Header, navegação
-principal, conteúdo principal e Footer no layout raiz. Os componentes de
-conteúdo e os comportamentos responsivos específicos ainda serão implementados
-nas tarefas seguintes. A extração deve continuar orientada por uso real, não
-por antecipação.
+principal, conteúdo principal e Footer no layout raiz. O Header usa uma
+composição empilhada em telas estreitas e horizontal em telas maiores; os links
+permanecem disponíveis sem menu colapsável ou JavaScript. Os componentes de
+conteúdo ainda serão implementados nas tarefas seguintes. A extração deve
+continuar orientada por uso real, não por antecipação.
 
 ## Conteúdo e composição
 

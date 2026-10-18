@@ -151,7 +151,7 @@ EPIC-02, sem declarar os EPICs seguintes como concluídos.
 | --- | --- | --- | --- |
 | PF-010 | Definição dos contratos e dados neutros do template | Planejada | PF-004, PF-005 |
 | PF-011 | Implementação do shell, layout e navegação | Concluída | PF-010 |
-| PF-012 | Implementação do Header e navegação responsiva | Planejada | PF-011 |
+| PF-012 | Implementação do Header e navegação responsiva | Concluída | PF-011 |
 | PF-013 | Implementação do Footer e CTAs institucionais | Planejada | PF-011 |
 | PF-014 | Implementação de Hero, seções e CTAs de conteúdo | Planejada | PF-010, PF-011 |
 | PF-015 | Implementação de galeria e cards reutilizáveis | Planejada | PF-010, PF-011 |
@@ -209,6 +209,14 @@ Critérios de aceite:
 Implementar Header neutro com identidade textual/configurável do template,
 navegação principal e comportamento adequado em telas estreitas, sem assumir a
 arquitetura de uma marca específica.
+
+Status: concluída. O Header do `src/components/site-shell.tsx` agora usa
+composição empilhada em telas estreitas e composição horizontal a partir do
+breakpoint `sm`, com espaçamento e padding adaptados. A navegação permanece
+sem menu colapsável para manter todos os links funcionais sem JavaScript; os
+itens continuam vindo de `siteNavigation`, com rótulos acessíveis e destinos
+definidos. A implementação usa apenas tokens neutros e não introduz conteúdo
+ou identidade de marca.
 
 Critérios de aceite:
 
