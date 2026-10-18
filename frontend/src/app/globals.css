@@ -41,7 +41,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-a {
+a:not([class]) {
   color: inherit;
 }
 

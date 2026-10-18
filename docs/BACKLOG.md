@@ -157,7 +157,7 @@ EPIC-02, sem declarar os EPICs seguintes como concluídos.
 | PF-015 | Implementação de galeria e cards reutilizáveis | Concluída | PF-010, PF-011 |
 | PF-016 | Composição da página inicial do template | Concluída | PF-012, PF-013, PF-014, PF-015 |
 | PF-017 | Validação de responsividade e estados de interação | Concluída | PF-016 |
-| PF-018 | Validação de acessibilidade e navegação por teclado | Planejada | PF-016 |
+| PF-018 | Validação de acessibilidade e navegação por teclado | Concluída | PF-016 |
 | PF-019 | Validação final, documentação e encerramento do EPIC-02 | Planejada | PF-017, PF-018 |
 
 ### PF-010 — Definição dos contratos e dados neutros do template
@@ -357,6 +357,16 @@ Critérios de aceite:
 
 Validar a interface navegável com foco em semântica, teclado, foco visível,
 nomes acessíveis, contraste e mídia.
+
+Status: concluída. A validação no navegador confirmou um Header, um conteúdo
+principal, um Footer e duas navegações nomeadas, com um único `h1`, títulos
+`h2`/`h3` em ordem e três imagens com texto alternativo. Os seis links
+interativos foram alcançados em sequência por `Tab`, todos exibiram outline
+visível de 2 px com offset de 3 px, e os CTAs/cards mantiveram destinos
+acionáveis por teclado. Foi corrigida a regra global de links que sobrescrevia
+o token `text-canvas` dos CTAs; após o ajuste, os CTAs usam texto claro sobre
+fundo escuro com contraste calculado de 17.93:1. Não foram encontradas falhas
+pendentes nesta validação.
 
 Critérios de aceite:
 

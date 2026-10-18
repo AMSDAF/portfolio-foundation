@@ -60,6 +60,10 @@ A extração deve continuar orientada por uso real, não por antecipação.
 Os links e CTAs do template usam foco visível, hover e feedback de ativação por
 movimento/decoração, sem depender apenas de mudança de cor.
 
+A regra global de links preserva herança somente em links sem classes, permitindo
+que os tokens semânticos de texto e fundo dos componentes mantenham seus estados
+e contraste.
+
 ## Conteúdo e composição
 
 Conteúdo deve permanecer separado da apresentação quando a estrutura de páginas
