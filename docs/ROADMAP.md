@@ -38,7 +38,8 @@ neutro, layouts e componentes reutilizáveis orientados por uso real.
   comercial real, não criar CMS, backend, autenticação, persistência,
   integrações de métricas ou sistema de temas/plugins; a indexação continua
   desativada conforme a fundação.
-- Estado: planejado; tarefas detalhadas em PF-010 a PF-019 no backlog.
+- Estado: em andamento; PF-011 a PF-019 foram executadas, mas PF-010 permanece
+  pendente de formalização e o EPIC-02 não é declarado concluído.
 
 ## EPIC-03 — Emilly Araújo Fotografia
 

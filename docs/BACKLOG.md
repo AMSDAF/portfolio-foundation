@@ -158,7 +158,7 @@ EPIC-02, sem declarar os EPICs seguintes como concluídos.
 | PF-016 | Composição da página inicial do template | Concluída | PF-012, PF-013, PF-014, PF-015 |
 | PF-017 | Validação de responsividade e estados de interação | Concluída | PF-016 |
 | PF-018 | Validação de acessibilidade e navegação por teclado | Concluída | PF-016 |
-| PF-019 | Validação final, documentação e encerramento do EPIC-02 | Planejada | PF-017, PF-018 |
+| PF-019 | Validação final, documentação e encerramento do EPIC-02 | Concluída com pendência | PF-017, PF-018 |
 
 ### PF-010 — Definição dos contratos e dados neutros do template
 
@@ -384,6 +384,24 @@ Critérios de aceite:
 Consolidar evidências das tarefas do epic, atualizar a documentação relacionada
 e confirmar que a fundação continua íntegra.
 
+Status: concluída com pendência. As validações finais passaram: `npm run test`
+(1 arquivo e 3 testes), `npm run lint`, `npm run typecheck`,
+`npm run format:check`, `npm run build` e `git diff --check`. O build gerou as
+rotas `/`, `/_not-found`, `/robots.txt` e `/sitemap.xml`. O smoke test local
+confirmou HTTP 200 para `/`, `/robots.txt` e `/sitemap.xml`; robots retorna
+`Disallow: /` e o sitemap permanece vazio enquanto a indexação estiver
+desativada. A página inicial renderizou com o shell, Hero, seções, galeria,
+cards, CTAs e Footer sem serviço externo.
+
+A documentação foi sincronizada em `ROADMAP.md`, `BACKLOG.md`,
+`ARCHITECTURE.md`, `DESIGN_SYSTEM.md` e `README.md`. Permanece uma pendência
+explícita: PF-010 ainda está marcada como planejada, embora contratos e dados
+tenham sido introduzidos incrementalmente nas tarefas seguintes. Por isso,
+conforme este critério de saída, o EPIC-02 permanece em andamento e não é
+declarado concluído. A tentativa de abrir `/robots.txt` no navegador integrado
+falhou, mas a mesma rota foi validada por HTTP local; não há impacto funcional
+identificado.
+
 Critérios de aceite:
 
 - `npm run test`, `npm run lint`, `npm run typecheck`, `npm run format:check` e
@@ -399,7 +417,6 @@ Critérios de aceite:
 
 ## Demais EPICs
 
-EPIC-02 a EPIC-06 estão registrados em nível de escopo no
-[ROADMAP.md](./ROADMAP.md). EPIC-02 foi detalhado acima; as tarefas definitivas
-de EPIC-03 a EPIC-06 ainda não foram detalhadas e não devem ser inventadas neste
-momento.
+EPIC-03 a EPIC-06 estão registrados em nível de escopo no
+[ROADMAP.md](./ROADMAP.md). Suas tarefas definitivas ainda não foram detalhadas
+e não devem ser inventadas neste momento.

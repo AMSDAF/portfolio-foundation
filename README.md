@@ -10,13 +10,14 @@ compartilhados, sem forçar a mesma experiência visual para todas as marcas.
 
 ## Estado atual
 
-O repositório concluiu as tarefas PF-001 a PF-009 da fundação e PF-011 a PF-016
-do EPIC-02. O shell estrutural envolve a aplicação com Header, navegação
-principal, conteúdo principal e Footer; a página inicial também compõe Hero,
-seções, galeria, cards e CTAs neutros. Identidade visual, conteúdo comercial,
-painel administrativo, métricas e integrações ainda não foram implementados. A
-infraestrutura SEO está preparada, mas a indexação permanece desativada até
-existir domínio e publicação autorizada.
+O repositório concluiu as tarefas PF-001 a PF-009 da fundação e PF-011 a PF-019
+do EPIC-02, com PF-010 ainda pendente de formalização. O shell estrutural
+envolve a aplicação com Header, navegação principal, conteúdo principal e
+Footer; a página inicial também compõe Hero, seções, galeria, cards e CTAs
+neutros. Identidade visual, conteúdo comercial, painel administrativo, métricas
+e integrações ainda não foram implementados. A infraestrutura SEO está
+preparada, mas a indexação permanece desativada até existir domínio e
+publicação autorizada.
 Consulte o [roadmap](./docs/ROADMAP.md) e o [backlog](./docs/BACKLOG.md) para o
 estado detalhado.
 
@@ -77,6 +78,7 @@ portfolio-foundation/
 ├── docs/                 # visão, arquitetura, design system e planejamento
 ├── frontend/
 │   ├── public/
+│   │   └── gallery/       # Mídia SVG local e substituível do template
 │   ├── src/
 │   │   ├── app/          # App Router e tela inicial atual
 │   │   ├── components/   # Componentes compartilhados com uso concreto
