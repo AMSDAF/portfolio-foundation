@@ -10,12 +10,12 @@ compartilhados, sem forçar a mesma experiência visual para todas as marcas.
 
 ## Estado atual
 
-O repositório concluiu as tarefas PF-001 a PF-009 da fundação. A auditoria
-confirmou a prontidão estrutural para iniciar o EPIC-02. Ainda há apenas o
-scaffold mínimo do Next.js e a página padrão; identidade visual, componentes de
-portfólio, conteúdo comercial, painel administrativo, métricas e integrações
-ainda não foram implementados. A infraestrutura SEO está preparada, mas a
-indexação permanece desativada até existir domínio e publicação autorizada.
+O repositório concluiu as tarefas PF-001 a PF-009 da fundação e PF-011 do
+EPIC-02. O shell estrutural já envolve a aplicação com Header, navegação
+principal, conteúdo principal e Footer; os componentes de conteúdo, identidade
+visual, conteúdo comercial, painel administrativo, métricas e integrações ainda
+não foram implementados. A infraestrutura SEO está preparada, mas a indexação
+permanece desativada até existir domínio e publicação autorizada.
 Consulte o [roadmap](./docs/ROADMAP.md) e o [backlog](./docs/BACKLOG.md) para o
 estado detalhado.
 
@@ -78,6 +78,7 @@ portfolio-foundation/
 │   ├── public/
 │   ├── src/
 │   │   ├── app/          # App Router e tela inicial atual
+│   │   ├── components/   # Componentes compartilhados com uso concreto
 │   │   ├── config/       # Configuração estática do site e SEO
 │   │   └── types/        # Contratos compartilhados
 │   ├── tests/            # Testes unitários da fundação
@@ -94,10 +95,11 @@ O alias `@/*` aponta para `frontend/src/*`. O Tailwind CSS 4 usa
 `@import "tailwindcss"` em `frontend/src/app/globals.css`, que também define
 tokens neutros iniciais; ainda não há arquivo `tailwind.config`.
 
-Os diretórios de componentes, features e bibliotecas serão criados quando
-houver responsabilidades concretas para eles. Os diretórios de configuração e
-tipos já existem porque centralizam contratos e dados estáticos do scaffold
-atual; nenhuma camada adicional é criada antecipadamente.
+O diretório de componentes foi criado para o shell estrutural implementado na
+PF-011. Features e bibliotecas serão criadas quando houver responsabilidades
+concretas para elas. Os diretórios de configuração e tipos já existem porque
+centralizam contratos e dados estáticos do scaffold atual; nenhuma camada
+adicional é criada antecipadamente.
 
 A indexação está desativada por padrão: não há domínio, URL canônica ou
 publicação autorizada configurados. A ativação de SEO público deve definir um

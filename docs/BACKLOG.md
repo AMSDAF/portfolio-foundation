@@ -150,7 +150,7 @@ EPIC-02, sem declarar os EPICs seguintes como concluídos.
 | ID | Tarefa | Status | Dependências |
 | --- | --- | --- | --- |
 | PF-010 | Definição dos contratos e dados neutros do template | Planejada | PF-004, PF-005 |
-| PF-011 | Implementação do shell, layout e navegação | Planejada | PF-010 |
+| PF-011 | Implementação do shell, layout e navegação | Concluída | PF-010 |
 | PF-012 | Implementação do Header e navegação responsiva | Planejada | PF-011 |
 | PF-013 | Implementação do Footer e CTAs institucionais | Planejada | PF-011 |
 | PF-014 | Implementação de Hero, seções e CTAs de conteúdo | Planejada | PF-010, PF-011 |
@@ -183,6 +183,15 @@ Critérios de aceite:
 Criar a composição estrutural do template dentro da fronteira `frontend/`,
 respeitando App Router, a direção de dependências e os tokens neutros. O shell
 deve permitir que páginas futuras componham conteúdo sem depender de uma marca.
+
+Status: concluída. O componente `src/components/site-shell.tsx` foi conectado
+ao layout raiz e fornece as regiões semânticas de Header, navegação principal,
+conteúdo principal e Footer. A navegação consome `siteNavigation`, o título do
+shell consome `siteContent` e os links usam `next/link`; não foram criados
+destinos fictícios, conteúdo de marca ou integrações externas. A página inicial
+foi ajustada para não aninhar outro elemento `<main>`. A validação foi realizada
+com `npm run lint`, `npm run typecheck`, `npm run format:check`, `npm run test` e
+`npm run build`, todos aprovados.
 
 Critérios de aceite:
 

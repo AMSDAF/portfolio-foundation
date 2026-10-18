@@ -24,6 +24,8 @@ portfolio-foundation/
 │   │   ├── config/
 │   │   │   ├── seo.ts
 │   │   │   └── site.ts
+│   │   ├── components/
+│   │   │   └── site-shell.tsx
 │   │   └── types/
 │   │       ├── content.ts
 │   │       └── navigation.ts
@@ -42,9 +44,11 @@ portfolio-foundation/
 O código da aplicação permanece em `frontend/`; essa fronteira não deve ser
 reorganizada. `src/config` e `src/types` agora existem porque PF-004 introduziu
 configuração centralizada e contratos compartilhados; `src/config/seo.ts`
-centraliza a ativação explícita da indexação definida na PF-006. Componentes,
-features e lib continuam ausentes porque o scaffold atual ainda não possui
-responsabilidades que justifiquem essas camadas.
+centraliza a ativação explícita da indexação definida na PF-006. O componente
+`src/components/site-shell.tsx` foi criado no EPIC-02 porque o shell estrutural
+já possui uso concreto no layout raiz. Features e lib continuam ausentes porque
+o scaffold atual ainda não possui responsabilidades que justifiquem essas
+camadas.
 
 ## Responsabilidades dos diretórios
 

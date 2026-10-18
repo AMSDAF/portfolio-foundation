@@ -43,11 +43,15 @@ Ainda não foram definidos tokens específicos de tipografia editorial,
 espaçamento, borda ou sombra, porque eles dependem de componentes e necessidades
 concretas do EPIC-02.
 
-## Componentes planejados
+## Componentes
 
 O EPIC-02 poderá incluir Header, Footer, Hero, seções, galerias, cards, CTAs,
-navegação e padrões responsivos. No estado atual nenhum desses componentes foi
-criado. A extração deve ser orientada por uso real, não por antecipação.
+navegação e padrões responsivos. O shell estrutural em
+`frontend/src/components/site-shell.tsx` já fornece Header, navegação
+principal, conteúdo principal e Footer no layout raiz. Os componentes de
+conteúdo e os comportamentos responsivos específicos ainda serão implementados
+nas tarefas seguintes. A extração deve continuar orientada por uso real, não
+por antecipação.
 
 ## Conteúdo e composição
 
