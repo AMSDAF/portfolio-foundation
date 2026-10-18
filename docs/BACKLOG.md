@@ -149,7 +149,7 @@ EPIC-02, sem declarar os EPICs seguintes como concluídos.
 
 | ID | Tarefa | Status | Dependências |
 | --- | --- | --- | --- |
-| PF-010 | Definição dos contratos e dados neutros do template | Planejada | PF-004, PF-005 |
+| PF-010 | Definição dos contratos e dados neutros do template | Concluída | PF-004, PF-005 |
 | PF-011 | Implementação do shell, layout e navegação | Concluída | PF-010 |
 | PF-012 | Implementação do Header e navegação responsiva | Concluída | PF-011 |
 | PF-013 | Implementação do Footer e CTAs institucionais | Concluída | PF-011 |
@@ -158,7 +158,7 @@ EPIC-02, sem declarar os EPICs seguintes como concluídos.
 | PF-016 | Composição da página inicial do template | Concluída | PF-012, PF-013, PF-014, PF-015 |
 | PF-017 | Validação de responsividade e estados de interação | Concluída | PF-016 |
 | PF-018 | Validação de acessibilidade e navegação por teclado | Concluída | PF-016 |
-| PF-019 | Validação final, documentação e encerramento do EPIC-02 | Concluída com pendência | PF-017, PF-018 |
+| PF-019 | Validação final, documentação e encerramento do EPIC-02 | Concluída | PF-017, PF-018 |
 
 ### PF-010 — Definição dos contratos e dados neutros do template
 
@@ -166,6 +166,21 @@ Separar o conteúdo de demonstração da apresentação e definir somente os
 contratos necessários para Header, Footer, Hero, seções, galeria, cards, CTAs e
 navegação. Usar os contratos existentes em `frontend/src/types/` quando forem
 suficientes e adicionar novos tipos apenas para necessidades comprovadas.
+
+Status: concluída retroativamente após auditoria contra o código existente. Os
+contratos tipados estão em `frontend/src/types/content.ts` e
+`frontend/src/types/navigation.ts`; os dados neutros de site, Hero, seções,
+galeria, Footer e navegação estão centralizados em
+`frontend/src/config/site.ts`. A apresentação consome esses contratos sem
+embutir dados nos componentes. A busca no código da aplicação não encontrou
+`any`, casts usados para contornar tipos ou referências à identidade da Emilly;
+o único `as const`, em `frontend/src/config/seo.ts`, preserva literalidade da
+configuração de SEO. Links possuem rótulos e destinos definidos, e as três
+imagens locais possuem texto alternativo. Não há persistência, integração
+externa, CMS ou abstração de tema.
+
+Evidências: `npm run test` (1 arquivo e 3 testes), `npm run lint`,
+`npm run typecheck` e `npm run format:check` passaram durante a auditoria.
 
 Critérios de aceite:
 
@@ -384,7 +399,7 @@ Critérios de aceite:
 Consolidar evidências das tarefas do epic, atualizar a documentação relacionada
 e confirmar que a fundação continua íntegra.
 
-Status: concluída com pendência. As validações finais passaram: `npm run test`
+Status: concluída. As validações finais passaram: `npm run test`
 (1 arquivo e 3 testes), `npm run lint`, `npm run typecheck`,
 `npm run format:check`, `npm run build` e `git diff --check`. O build gerou as
 rotas `/`, `/_not-found`, `/robots.txt` e `/sitemap.xml`. O smoke test local
@@ -394,13 +409,11 @@ desativada. A página inicial renderizou com o shell, Hero, seções, galeria,
 cards, CTAs e Footer sem serviço externo.
 
 A documentação foi sincronizada em `ROADMAP.md`, `BACKLOG.md`,
-`ARCHITECTURE.md`, `DESIGN_SYSTEM.md` e `README.md`. Permanece uma pendência
-explícita: PF-010 ainda está marcada como planejada, embora contratos e dados
-tenham sido introduzidos incrementalmente nas tarefas seguintes. Por isso,
-conforme este critério de saída, o EPIC-02 permanece em andamento e não é
-declarado concluído. A tentativa de abrir `/robots.txt` no navegador integrado
-falhou, mas a mesma rota foi validada por HTTP local; não há impacto funcional
-identificado.
+`ARCHITECTURE.md`, `DESIGN_SYSTEM.md` e `README.md`. A auditoria retroativa da
+PF-010 confirmou os contratos e dados já utilizados pelas tarefas seguintes,
+eliminando a pendência documental. A tentativa de abrir `/robots.txt` no
+navegador integrado falhou, mas a mesma rota foi validada por HTTP local; não
+há impacto funcional identificado.
 
 Critérios de aceite:
 

@@ -38,8 +38,9 @@ neutro, layouts e componentes reutilizáveis orientados por uso real.
   comercial real, não criar CMS, backend, autenticação, persistência,
   integrações de métricas ou sistema de temas/plugins; a indexação continua
   desativada conforme a fundação.
-- Estado: em andamento; PF-011 a PF-019 foram executadas, mas PF-010 permanece
-  pendente de formalização e o EPIC-02 não é declarado concluído.
+- Estado: concluído; PF-010 a PF-019 concluídas com evidências registradas no
+  backlog. O template neutro está pronto para as decisões e materiais do
+  EPIC-03.
 
 ## EPIC-03 — Emilly Araújo Fotografia
 
