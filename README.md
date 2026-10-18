@@ -84,8 +84,8 @@ portfolio-foundation/
 ```
 
 O alias `@/*` aponta para `frontend/src/*`. O Tailwind CSS 4 usa
-`@import "tailwindcss"` em `frontend/src/app/globals.css`; ainda não há tokens
-customizados nem arquivo `tailwind.config`.
+`@import "tailwindcss"` em `frontend/src/app/globals.css`, que também define
+tokens neutros iniciais; ainda não há arquivo `tailwind.config`.
 
 Os diretórios de componentes, features e bibliotecas serão criados quando
 houver responsabilidades concretas para eles. Os diretórios de configuração e

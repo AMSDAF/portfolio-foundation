@@ -8,7 +8,7 @@
 | PF-002 | Configuração das ferramentas | Concluída |
 | PF-003 | Estrutura arquitetural | Concluída |
 | PF-004 | Configuração e contratos tipados | Concluída |
-| PF-005 | Base visual e estilos globais | Pendente |
+| PF-005 | Base visual e estilos globais | Concluída |
 | PF-006 | Fundação de SEO | Pendente |
 | PF-007 | Testes e validações | Pendente |
 | PF-008 | Documentação do projeto | Pendente — consolidação parcial nesta etapa |
@@ -77,7 +77,11 @@ dados, plugins, temas ou conteúdo específico da Emilly.
 Preparar estilos globais; definir tokens neutros iniciais; não implementar
 identidade de marca; preparar a base do EPIC-02.
 
-Status: pendente. O CSS atual contém apenas a importação padrão do Tailwind.
+Status: concluída. `frontend/src/app/globals.css` mantém a importação do
+Tailwind CSS 4 e define tokens semânticos neutros iniciais para canvas,
+superfícies, bordas, conteúdo e foco, além de estilos globais mínimos para
+reset de box sizing, corpo, links e foco visível. Não foram criados componentes
+ou páginas do EPIC-02, nem aplicada identidade visual da Emilly.
 
 ### PF-006 — Fundação de SEO
 

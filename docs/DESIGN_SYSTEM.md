@@ -22,10 +22,15 @@ ser codificadas no template neutro.
 
 ## Tokens
 
-Ainda não existem tokens de cor, tipografia, espaçamento, borda ou sombra
-customizados no código. O CSS atual importa apenas o Tailwind CSS 4. A definição
-de tokens deve acontecer antes da personalização de telas e ser validada contra
-os materiais originais da marca.
+O CSS global agora possui tokens neutros iniciais em escala de cinza, definidos
+como variáveis semânticas em `src/app/globals.css`. Eles cobrem canvas,
+superfície, borda, conteúdo e foco, e estão disponíveis como cores do tema do
+Tailwind CSS 4. A tipografia inicial usa a pilha sans-serif do sistema.
+
+Esses valores são uma base técnica provisória para o template neutro, não são a
+identidade final de nenhuma implementação. A definição de tokens de marca deve
+acontecer antes da personalização de telas e ser validada contra os materiais
+originais.
 
 Os tokens futuros devem:
 
@@ -33,6 +38,10 @@ Os tokens futuros devem:
 - possuir semântica clara para uso em componentes;
 - manter contraste e estados interativos acessíveis;
 - evitar duplicação de valores e decisões espalhadas pelas telas.
+
+Ainda não foram definidos tokens específicos de tipografia editorial,
+espaçamento, borda ou sombra, porque eles dependem de componentes e necessidades
+concretas do EPIC-02.
 
 ## Componentes planejados
 
@@ -50,8 +59,8 @@ própria.
 ## Limites
 
 - Não implementar identidade visual da Emilly no template neutro.
-- Não criar um tema genérico complexo para resolver necessidades ainda
-  hipotéticas.
+- Manter os tokens neutros iniciais pequenos e sem criar um tema genérico
+  complexo para resolver necessidades ainda hipotéticas.
 - Não tratar tokens de referência como decisões finais.
 - Não introduzir editor visual ou sistema de plugins.
 - Validar comportamento responsivo e acessibilidade junto com cada componente.
