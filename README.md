@@ -10,7 +10,7 @@ compartilhados, sem forçar a mesma experiência visual para todas as marcas.
 
 ## Estado atual
 
-O repositório concluiu as tarefas PF-001 a PF-006 da fundação. Ainda há apenas o
+O repositório concluiu as tarefas PF-001 a PF-007 da fundação. Ainda há apenas o
 scaffold mínimo do Next.js e a página padrão; identidade visual, componentes de
 portfólio, conteúdo comercial, painel administrativo, métricas e integrações
 ainda não foram implementados. A infraestrutura SEO está preparada, mas a
@@ -63,6 +63,7 @@ Dentro de `frontend/`:
 | `npm start` | disponível após um build |
 | `npm run lint` | disponível |
 | `npm run typecheck` | disponível |
+| `npm run test` | disponível |
 | `npm run format` | disponível |
 | `npm run format:check` | disponível |
 
@@ -77,6 +78,8 @@ portfolio-foundation/
 │   │   ├── app/          # App Router e tela inicial atual
 │   │   ├── config/       # Configuração estática do site e SEO
 │   │   └── types/        # Contratos compartilhados
+│   ├── tests/            # Testes unitários da fundação
+│   ├── vitest.config.ts
 │   ├── next.config.ts
 │   ├── package.json
 │   └── tsconfig.json

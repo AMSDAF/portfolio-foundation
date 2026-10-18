@@ -10,7 +10,7 @@
 | PF-004 | Configuração e contratos tipados | Concluída |
 | PF-005 | Base visual e estilos globais | Concluída |
 | PF-006 | Fundação de SEO | Concluída |
-| PF-007 | Testes e validações | Pendente |
+| PF-007 | Testes e validações | Concluída |
 | PF-008 | Documentação do projeto | Pendente — consolidação parcial nesta etapa |
 | PF-009 | Auditoria de encerramento | Pendente |
 
@@ -101,7 +101,11 @@ domínio real e publicação autorizada.
 
 Adicionar testes básicos, typecheck, lint, build e execução em produção local.
 
-Status: pendente. Não há scripts de testes, lint ou typecheck dedicados.
+Status: concluída. Foram adicionados Vitest e testes unitários em
+`frontend/tests/seo.test.ts` para validar a política de indexação, o bloqueio
+de crawlers e o sitemap vazio sem domínio. O script `npm run test` foi
+configurado e executado. Também foram validados `typecheck`, `lint`,
+`format:check`, `build` e o servidor de produção local com resposta HTTP 200.
 
 ### PF-008 — Documentação do projeto
 
