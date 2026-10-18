@@ -15,10 +15,15 @@ portfolio-foundation/
 ├── frontend/
 │   ├── public/
 │   ├── src/
-│   │   └── app/
-│   │       ├── globals.css
-│   │       ├── layout.tsx
-│   │       └── page.tsx
+│   │   ├── app/
+│   │   │   ├── globals.css
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── config/
+│   │   │   └── site.ts
+│   │   └── types/
+│   │       ├── content.ts
+│   │       └── navigation.ts
 │   ├── next.config.ts
 │   ├── package.json
 │   ├── package-lock.json
@@ -29,9 +34,10 @@ portfolio-foundation/
 ```
 
 O código da aplicação permanece em `frontend/`; essa fronteira não deve ser
-reorganizada. A estrutura atual é suficiente para PF-001 e PF-002. Não existem
-diretórios de componentes, features, config, lib ou types porque o scaffold
-atual ainda não possui responsabilidades que justifiquem essas camadas.
+reorganizada. `src/config` e `src/types` agora existem porque PF-004 introduziu
+configuração centralizada e contratos compartilhados. Componentes, features e
+lib continuam ausentes porque o scaffold atual ainda não possui
+responsabilidades que justifiquem essas camadas.
 
 ## Responsabilidades dos diretórios
 
@@ -46,7 +52,8 @@ Quando forem necessários, os diretórios terão responsabilidades distintas:
   de apresentação.
 - `src/lib/`: utilitários e serviços independentes de componentes React.
 - `src/types/`: contratos TypeScript compartilhados quando não pertencerem a
-  uma feature específica.
+  uma feature específica. Atualmente contém os contratos neutros de conteúdo e
+  navegação.
 
 Esses diretórios não devem ser criados apenas como scaffolding vazio. Uma
 feature pode manter seus tipos, dados e utilitários próximos dela quando isso
@@ -73,8 +80,8 @@ quando melhorar a clareza, sem substituir a separação de responsabilidades.
 
 1. Uma aplicação única inicialmente; não criar backend separado neste estágio.
 2. Conteúdo estático primeiro; persistência e painel vêm depois.
-3. Separar dados, contratos tipados e apresentação quando essas camadas forem
-   introduzidas.
+3. Separar dados, contratos tipados e apresentação. A configuração estática
+   fica em `src/config`, enquanto os contratos ficam em `src/types`.
 4. Extrair componentes compartilhados somente após existir necessidade concreta.
 5. O núcleo não pode depender da identidade visual da Emilly.
 6. Reutilizar infraestrutura e componentes quando fizer sentido, sem exigir que
@@ -97,6 +104,8 @@ como dependência atual.
 - `components` não deve importar conteúdo específico de uma marca ou feature.
 - `config`, `lib` e `types` não devem importar componentes de apresentação.
 - Dados não devem importar componentes de apresentação.
+- `config` pode importar contratos de `types`, mas `types` não pode importar
+  configuração ou componentes.
 - Integrações externas devem ficar atrás de limites claros e só serão
   introduzidas quando a tarefa correspondente for iniciada.
 - Evitar dependências circulares e manter aliases relativos ao `@/*` existente.

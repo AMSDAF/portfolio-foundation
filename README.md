@@ -71,7 +71,10 @@ portfolio-foundation/
 ├── docs/                 # visão, arquitetura, design system e planejamento
 ├── frontend/
 │   ├── public/
-│   ├── src/app/          # App Router e tela inicial atual
+│   ├── src/
+│   │   ├── app/          # App Router e tela inicial atual
+│   │   ├── config/       # Configuração estática do site
+│   │   └── types/        # Contratos compartilhados
 │   ├── next.config.ts
 │   ├── package.json
 │   └── tsconfig.json
@@ -84,9 +87,10 @@ O alias `@/*` aponta para `frontend/src/*`. O Tailwind CSS 4 usa
 `@import "tailwindcss"` em `frontend/src/app/globals.css`; ainda não há tokens
 customizados nem arquivo `tailwind.config`.
 
-Os diretórios de componentes, features, configuração, bibliotecas e tipos serão
-criados quando houver responsabilidades concretas para eles. O scaffold atual
-não cria camadas vazias antecipadamente.
+Os diretórios de componentes, features e bibliotecas serão criados quando
+houver responsabilidades concretas para eles. Os diretórios de configuração e
+tipos já existem porque centralizam contratos e dados estáticos do scaffold
+atual; nenhuma camada adicional é criada antecipadamente.
 
 ## Documentação
 

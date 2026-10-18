@@ -7,7 +7,7 @@
 | PF-001 | Inicialização do repositório | Concluída |
 | PF-002 | Configuração das ferramentas | Concluída |
 | PF-003 | Estrutura arquitetural | Concluída |
-| PF-004 | Configuração e contratos tipados | Pendente |
+| PF-004 | Configuração e contratos tipados | Concluída |
 | PF-005 | Base visual e estilos globais | Pendente |
 | PF-006 | Fundação de SEO | Pendente |
 | PF-007 | Testes e validações | Pendente |
@@ -50,9 +50,9 @@ dependências circulares; não acoplar a identidade da Emilly ao núcleo.
 Status: concluída. As responsabilidades de `app`, `components`, `features`,
 `config`, `lib` e `types`, além das regras de dependência e reutilização, estão
 registradas em [ARCHITECTURE.md](./ARCHITECTURE.md). A estrutura atual mantém
-somente `src/app`, pois não há uso concreto para as demais camadas no scaffold
-existente; diretórios vazios não foram criados para evitar complexidade
-desnecessária.
+`src/app`, `src/config` e `src/types`, pois PF-004 introduziu configuração e
+contratos concretos. Diretórios vazios de componentes, features e lib não foram
+criados para evitar complexidade desnecessária.
 
 O alias `@/*` foi verificado em `frontend/tsconfig.json` e aponta para
 `frontend/src/*`. ESLint e TypeScript foram executados sem erros, fornecendo
@@ -65,7 +65,12 @@ Centralizar configuração do site; criar contratos tipados para conteúdo e
 navegação; separar dados e apresentação; evitar plugins e temas excessivamente
 complexos.
 
-Status: pendente. Não há contratos ou configuração de conteúdo no código atual.
+Status: concluída. A configuração neutra do site está centralizada em
+`frontend/src/config/site.ts`, e os contratos compartilhados de conteúdo e
+navegação estão em `frontend/src/types/content.ts` e
+`frontend/src/types/navigation.ts`. O layout usa `siteContent` para metadata,
+mantendo dados separados da apresentação. Não foram introduzidos banco de
+dados, plugins, temas ou conteúdo específico da Emilly.
 
 ### PF-005 — Base visual e estilos globais
 

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { siteContent } from "@/config/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Portfolio Foundation",
-  description: "Base reutilizável para portfólios profissionais.",
+  title: siteContent.title,
+  description: siteContent.description,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
